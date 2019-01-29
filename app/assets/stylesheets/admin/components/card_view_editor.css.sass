@@ -1,0 +1,30 @@
+.card.view.editor
+  *[contenteditable=true]
+    min-height: 30px
+    border: 1px dotted #fff
+
+  .toolbox
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    align-items: center
+
+    margin-bottom: 1.2em
+
+    .breadcrumbs
+      flex: 1
+      margin: 0
+
+    .actions
+      flex: 0 0 auto
+      min-width: 260px
+      margin: 0 0 0 1em
+
+  .checkboxes
+    margin-top: 2em
+
+    .replacement.field, .glossary.field
+      margin-bottom: 1em
+      label
+        font-weight: bold
+        color: $basic-text !important

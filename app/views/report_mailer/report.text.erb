@@ -1,0 +1,8 @@
+<%= t 'reports.subject' %>
+---
+<%= t 'reports.about' %>
+---
+* <%= t 'reports.url' %>: <%= link_to @report.url, @report.url %>
+* IP: <%= @report.ip %>
+---
+<%= @report.context %>

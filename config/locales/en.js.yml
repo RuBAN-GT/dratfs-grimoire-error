@@ -1,0 +1,21 @@
+en:
+  js:
+    editor:
+      add: add
+      cancel: Cancel
+      edit: Edit
+      glossary: Allow tooltips
+      replacement: Allow replacement
+      save: Save
+    glossary:
+      body: Tooltip
+      empty: No tooltips
+      glossary: Glossary
+      replacement: Replacement
+      slug: Key word
+    search:
+      empty: No results for youre request
+      limit: Too few short request, enter %{min} chars
+      more: More results
+      none: Find interesting card
+      placeholder: Search...

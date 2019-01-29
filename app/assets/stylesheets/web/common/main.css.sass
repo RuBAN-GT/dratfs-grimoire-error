@@ -1,0 +1,105 @@
+body
+  background-color: #3E362E
+  background-position: center 60px
+  background-repeat: no-repeat
+  background-size: cover
+  background-attachment: fixed
+  background-image: asset-data-url('background.jpg')
+
+.basic.wrapper
+  padding-left: $wrapped
+  padding-right: $wrapped
+
+.ui.main.menu
+  background-color: black
+  height: 60px
+
+  z-index: 8800
+
+  .wrapper
+    white-space: nowrap
+
+  .item
+    text-transform: uppercase
+    font-weight: 400
+
+    > .icon
+      font-size: 1.4em
+
+    &.header
+      letter-spacing: 0.7em
+
+      .icon
+        font-size: 1.5em
+        margin: 0 0.6em 0 0.2em
+
+  .dropdown
+    .menu
+      left: inherit
+      right: 0
+
+  .profile
+    max-width: 100%
+    max-height: 100%
+    width: 35px
+    height: 35px
+
+  .ui.dropdown .menu
+    z-index: 8900
+
+.ui.main.container
+  padding-top: 7em
+  padding-bottom: 2em
+
+.flash
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 9999
+
+  padding: 0
+
+  .message
+    position: relative
+    padding: 1em 3em 1em 1em
+
+    background-color: #151517
+    background-color: rgba(#151517, 0.6)
+    color: #FFF
+
+    &:first-of-type
+      border-radius: 0.3rem 0.3rem 0 0
+
+    .close
+      position: absolute
+      top: 1em
+      right: 0.8em
+
+      cursor: pointer
+
+.breadcrumbs
+  a
+    text-decoration: underline
+
+  .divider
+    &:before
+      content: '/'
+      display: inline-block
+      margin: 0 0.2rem
+
+.nopadded
+  padding: 0 !important
+
+.closed.overlay
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+  background-color: rgba(0, 0, 0, 0.5)
+  display: flex
+  color: $special-text
+  justify-content: center
+  align-items: center

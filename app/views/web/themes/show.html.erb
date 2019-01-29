@@ -1,0 +1,10 @@
+<% title @theme.name unless @theme.nil? %>
+
+<%= react_component 'ThemesView',
+  {
+    :themes => @themes.to_serializer(:except => %w(collections)),
+    :current => @theme&.real_id,
+    :entries => @entries
+  },
+  :prerender => false
+%>

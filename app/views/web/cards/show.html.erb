@@ -1,0 +1,26 @@
+<% title @card.name %>
+
+<%
+  if can?(:manage, Card) && cookies[:editor] == 'enable'
+    type = 'CardViewEditor'
+  else
+    type = 'CardView'
+  end
+%>
+
+<%= react_component type,
+  {
+    :theme => @theme.to_serializer(serializer_options(:except => %w(collections))),
+    :collection => @collection.to_serializer(serializer_options(:except => %w(theme cards))),
+    :cards => @cards.to_serializer(serializer_options.merge(:except => %w(theme collection))),
+    :current => @card.real_id,
+    :meta => {
+      :current_page => @cards.current_page,
+      :next_page => @cards.next_page,
+      :prev_page => @cards.prev_page
+    },
+    :cookies => cookies,
+    :user => current_user&.display_name
+  },
+  :prerender => false
+%>

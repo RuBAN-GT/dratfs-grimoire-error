@@ -1,0 +1,10 @@
+- if @cards.any?
+  .ui.bulleted.list
+    - @cards.each do |card|
+      .item
+        = link_to card.name, theme_collection_card_path(card.theme, card.collection, card)
+
+  = paginate @cards
+- else
+  .ui.message
+    .content No opened cards.

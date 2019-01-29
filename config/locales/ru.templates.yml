@@ -1,0 +1,19 @@
+ru:
+  templates:
+    about: О переводе
+    admin: Админка
+    editor:
+      disable: Обычный режим
+      enable: Редакторский режим
+    grimoire: Гримуар
+    langs:
+      replacement:
+        disable: Запретить замену
+        enable: Разрешить замену
+      glossary:
+        disable: Запретить подсказки
+        enable: Разрешить подсказки
+    profile: Профиль
+    root_site: Основной сайт
+    sign_in: Войти
+    sign_out: Выйти

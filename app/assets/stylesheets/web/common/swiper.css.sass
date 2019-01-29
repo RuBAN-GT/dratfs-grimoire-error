@@ -1,0 +1,68 @@
+.swiper
+  padding: 0 70px 2.8em
+  position: relative
+
+  .card
+    cursor: pointer
+
+    width: 150px
+
+    .name
+      padding: 0.3em
+
+      text-align: center
+      text-transform: uppercase
+      font-size: 1.2em
+      font-weight: 400
+      color: $special-text
+
+    .image
+      width: 150px
+      height: 195px
+      margin: 0 auto
+
+    img, .lazy-preloader
+      width: 100%
+      height: 100%
+
+  .pagination
+    display: block
+    text-align: center
+    margin-top: 0.8em
+
+    .bullet
+      opacity: 0.2
+      width: 10px
+      height: 10px
+      margin: 0 5px
+      display: inline-block
+      background-color: #000
+      background-color: rgba($special-text, 0.7)
+      border-radius: 100%
+      cursor: pointer
+    .active
+      background-color: $special-text
+      opacity: 1.0
+
+  .arrow
+    width: 34.375px
+    height: 64px
+
+    top: 101px
+    margin-top: -32px
+
+    background-size: 34.375px 64px
+
+    &.prev
+      background-image: asset_data_url('swiper_left.svg')
+    &.next
+      background-image: asset_data_url('swiper_right.svg')
+
+  .swiper-lazy
+    display: none
+    &.swiper-lazy-loaded
+      display: block
+
+  .lazy-preloader
+    position: relative
+    filter: sepia(0.6)

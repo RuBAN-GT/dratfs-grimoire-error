@@ -1,0 +1,4 @@
+.page.entry.basic.wrapper
+  %h1.ui.header= t('templates.about')
+
+  .body= Faker::Lorem.paragraphs(20).join("<br /><br />").html_safe

@@ -1,0 +1,49 @@
+!!! 5
+%html
+  %head
+    = display_meta_tags
+
+    = csrf_meta_tags
+
+    %meta{:name => :viewport, :content => 'width=device-width, initial-scale=1'}
+
+    %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=EDGE,chrome=1'}
+
+    %meta{:name => 'turbolinks-cache-control', :content => 'no-cache'}
+
+    = stylesheet_link_tag 'application',
+      :media => 'all',
+      'data-turbolinks-track' => 'reload'
+    = stylesheet_link_tag 'web/application',
+      :media => 'all',
+      'data-turbolinks-track' => 'reload'
+
+    :javascript
+        I18n = {
+          defaultLocale: '#{I18n.default_locale}',
+          locale: '#{I18n.locale}',
+          fallbacks: true
+        };
+
+    = javascript_include_tag 'https://www.google.com/recaptcha/api.js',
+      'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application',
+      'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'web/application',
+      'data-turbolinks-track' => 'reload'
+  %body
+    = render 'web/_components/main_navigation'
+
+    .ui.main.container{:class => target_classes}
+      = yield
+
+    = target_assets
+
+    - if can? :manage, Card
+      = stylesheet_link_tag 'admin/application',
+        :media => 'all',
+        'data-turbolinks-track' => 'reload'
+      = javascript_include_tag 'admin/application',
+        'data-turbolinks-track' => 'reload'
+
+    = flash_all

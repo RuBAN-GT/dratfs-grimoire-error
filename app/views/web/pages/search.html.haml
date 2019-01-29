@@ -1,0 +1,6 @@
+- if @results.any?
+  .ui.list.bulleted
+    - @results.each do |item|
+      = link_to item.name, theme_collection_card_path(item.theme, item.collection, item), :class => :item
+
+  = paginate @results

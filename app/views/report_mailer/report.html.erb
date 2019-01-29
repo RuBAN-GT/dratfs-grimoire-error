@@ -1,0 +1,12 @@
+<h4 class="header"><%= t 'reports.subject' %></h4>
+
+<p class="about"><%= t 'reports.about' %></p>
+
+<p class="info">
+  <ul>
+    <li><%= t 'reports.url' %>: <%= link_to @report.url, @report.url %></li>
+    <li>IP: <%= @report.ip %></li>
+  </ul>
+</p>
+
+<p class="content"><%= @report.context %></p>

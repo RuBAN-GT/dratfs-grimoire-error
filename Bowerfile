@@ -1,0 +1,9 @@
+asset 'coverflow', '^1.3.5'
+asset 'swiper', '^3.4.1'
+asset 'nanoscroller', '^0.8.7'
+asset 'medium.js', '#master'
+
+asset 'promise-polyfill'
+asset 'fetch'
+asset 'es6-shim'
+asset 'js-cookie'

@@ -1,0 +1,127 @@
+.card.view
+  > .basic.wrapper
+    color: $basic-text
+    font-size: 1.2em
+    a
+      color: $basic-text
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+
+    .breadcrumbs
+      margin-bottom: 1.2em
+      font-weight: bold
+      text-transform: uppercase
+      font-size: 1.7rem
+      line-height: 1.2em
+
+    .grid
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+
+      background-color: $bg-shade
+      background-color: $bg-shade-alpha
+      padding: 2em
+
+      margin-bottom: 60px
+
+    .poster
+      flex: 0 0 auto
+
+      .picture
+        position: relative
+        width: 300px
+        height: 385px
+
+        img
+          width: 100%
+          height: 100%
+        img, .overlay
+          border-radius: 8px 8px 0 0
+
+      .user.menu
+        text-align: center
+        font-size: 1.5em
+        color: $basic-text
+
+        background-color: $bg-shade
+        background-color: $bg-shade-alpha
+        border-radius: 0 0 8px 8px
+        padding: 12px 10px 8px
+        line-height: 1em
+
+        .menu
+          display: inline-block
+
+        i
+          cursor: pointer
+          margin-right: 0.7rem
+          &:hover
+            color: $special-text
+
+    .info
+      flex: 1 1 auto
+      position: relative
+      margin-left: 2.5rem
+
+      a
+        text-decoration: underline
+
+      .report
+        font-style: italic
+        font-size: 0.95em
+        text-align: center
+        margin-top: 2em
+
+      .content
+        line-height: 1.2em
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: auto
+        height: 100%
+
+        p
+          line-height: 1.2em
+
+      .unopened
+        font-size: 1.6em
+
+      .intro
+        margin-bottom: 1em
+
+      .tooltiped
+        text-decoration: underline
+        cursor: help
+
+      .nano-content
+        padding-right: 1.5em
+
+      .nano-pane
+        background-color: rgba(#000, 0.5)
+        .nano-slider
+          background-color: rgba($basic-text, 0.5)
+
+  .cards.section
+    .full.cards
+      margin-top: 2.5em
+
+      .card
+        width: 130px
+
+        &.active img
+          outline: 5px solid rgba($special-text, 0.7)
+          outline-offset: -5px
+
+        .image
+          position: relative
+          width: 130px
+          height: 169px
+        .name
+          color: $basic-text
+
+    .arrow
+      top: 84px

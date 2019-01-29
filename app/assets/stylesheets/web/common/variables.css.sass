@@ -1,0 +1,20 @@
+$font-name: 'Circe' !default
+$wrapped: 70px
+$bg-shade: #151517
+$bg-shade-alpha: rgba(#151517, 0.6)
+$basic-text: #fffbe9
+$special-text: #fef2b8
+$mark-text: #fffbe9
+$mark-special-text: #fef2b8
+
+@mixin placeholder
+  &.placeholder
+    @content
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content

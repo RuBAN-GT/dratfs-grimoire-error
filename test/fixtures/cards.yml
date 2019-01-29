@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  real_id: MyString
+  name: MyString
+  intro: MyString
+  description: MyText
+  unlock_text: MyString
+  rarity: 1
+  points: 1
+
+two:
+  real_id: MyString
+  name: MyString
+  intro: MyString
+  description: MyText
+  unlock_text: MyString
+  rarity: 1
+  points: 1

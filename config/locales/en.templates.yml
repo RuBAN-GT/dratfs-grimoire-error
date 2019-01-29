@@ -1,0 +1,19 @@
+en:
+  templates:
+    about: About
+    admin: Admin
+    editor:
+      disable: Common mode
+      enable: Editor mode
+    grimoire: Grimoire
+    langs:
+      replacement:
+        disable: Disable replacement
+        enable: Allow replacement
+      glossary:
+        disable: Disable tooltips
+        enable: Allow tooltips
+    profile: Profile
+    root_site: Common site
+    sign_in: Sign in
+    sign_out: Sign out

@@ -1,0 +1,75 @@
+.glossary.panel
+  position: fixed
+  top: 60px
+  right: 0
+  bottom: 0
+  z-index: 7000
+
+  width: 420px
+
+  background-color: rgba(#151517, 0.8)
+  color: #FFF
+
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+
+  > .header
+    border-bottom: 1px solid #fff
+    padding: 0.8em 1em
+    flex: 0 0 auto
+
+    span
+      color: #FFF
+    i
+      float: right
+      cursor: pointer
+
+  > .container
+    flex: 1 1
+    padding: 1em
+
+.glossary.editor
+  height: 100%
+  color: #FFF
+
+  .content
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    height: 100%
+
+    > .body
+      flex: 1 1
+
+      .nano-content
+        padding: 0 1.5em 0 0
+      .nano-pane
+        background-color: rgba(#fff, 0.2)
+        .nano-slider
+          background-color: rgba(#fff, 0.6)
+
+      .table
+        table-layout: fixed
+        td
+          word-wrap: break-word
+          white-space: inherit
+
+          &.slug
+            width: 115px
+          &.body
+            width: 115px
+          &.replacement
+            width: 40px
+            text-align: center
+          &.tools
+            width: 100px
+            text-align: center
+
+  .new.form
+    flex: 0 0 auto
+    margin-bottom: 1em
+
+    .field
+      label
+        color: #FFF

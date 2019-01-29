@@ -1,0 +1,64 @@
+.ui.fixed.inverted.main.menu
+  .ui.container.basic.wrapper
+    = link_to root_path, :class => 'header title item' do
+      %span.mobile.hidden Destiny
+      %i.icon.destiny
+      %span.mobile.hidden= t('templates.grimoire')
+
+    .menu.right
+      .menu.left.tablet.or.lower.hidden
+        = link_to t('templates.root_site'), 'http://destiny.wtf', :class => :item
+        = link_to t('templates.about'), about_path, :class => :item
+
+      = react_component 'LiveSearch', {}, :class => 'item livesearch mobile hidden'
+
+      .ui.left.dropdown.icon.item
+        %i.icon.globe
+
+        .menu
+          - if I18n.locale == :en
+            = link_to t('templates.langs.russian'), '/ru',  :class => :item, 'data-turbolinks' => false
+          - else
+            = link_to t('templates.langs.english'), '/en', :class => :item, 'data-turbolinks' => false
+
+          - if cookies[:replacement].nil? || cookies[:replacement] == 'on'
+            = link_to t('templates.langs.replacement.disable'), "#{request.path}?replacement=off", :class => :item
+          - else
+            = link_to t('templates.langs.replacement.enable'), "#{request.path}?replacement=on", :class => :item
+
+          - if cookies[:glossary].nil? || cookies[:glossary] == 'on'
+            = link_to t('templates.langs.glossary.disable'), "#{request.path}?glossary=off", :class => :item
+          - else
+            = link_to t('templates.langs.glossary.enable'), "#{request.path}?glossary=on", :class => :item
+
+      - if user_signed_in?
+        .ui.dropdown.item
+          = image_tag current_user.avatar,
+            :class => 'ui image profile rounded',
+            :alt => current_user.display_name
+          .menu
+            - if can? :access, :rails_admin
+              = link_to t('templates.admin'), rails_admin_path, :class => :item
+
+            - if can? :manage, Card
+              - if cookies[:editor] == 'enable'
+                = link_to t('templates.editor.disable'), "#{request.path}?editor=disable", :class => :item
+              - else
+                = link_to t('templates.editor.enable'), "#{request.path}?editor=enable", :class => :item
+
+            = link_to t('templates.sign_out'),
+              destroy_user_session_path,
+              :class => :item,
+              :method => :delete
+      - else
+        = link_to icon('sign in'),
+          user_bungie_omniauth_authorize_path,
+          :class => :item,
+          :title => t('templates.sign_in')
+
+      .ui.left.dropdown.icon.item.mobile.tablet.only
+        %i.icon.ellipsis.vertical
+
+        .menu
+          = link_to t('templates.root_site'), 'http://destiny.wtf', :class => :item
+          = link_to t('templates.about'), about_path, :class => :item
